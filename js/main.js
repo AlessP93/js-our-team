@@ -1,4 +1,4 @@
-const post = [
+const staff = [
     {
         nome: "Wayne Barnett",
         img: "img/wayne-barnett-founder-ceo.jpg",
@@ -31,4 +31,24 @@ const post = [
     }
 
 ];
+
+const teamContainer = document.querySelector(".team-container");
+
+for (let i = 0; i < staff.length; i++) {
+   const teamCard = `
+        <div class="team-card">
+        <div class="card-image">
+            <img
+            src="${staff[i].img}"
+            alt="${staff[i].nome}" 
+            />
+        </div>
+        <div class="card-text">
+            <h3>${staff[i].nome}</h3>
+            <p>${staff[i].ruolo}</p>
+        </div>
+        </div> 
+   `;
+   teamContainer.innerHTML += teamCard;
+};
 
